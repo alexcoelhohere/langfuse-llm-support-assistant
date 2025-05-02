@@ -1,4 +1,4 @@
-# 🧾 LLM-Powered Support Assitant
+# 🧾 LLM-Powered Support Assistant
 
 This project uses **GPT-4o** and **Langfuse** to automatically summarize and categorize customer support tickets. It's designed to help support teams onboard agents faster, improve triage, and build datasets for future training and QA workflows.
 
