@@ -1,23 +1,27 @@
-# Langfuse LLM Support Summarizer 🧾
+# 🧾 LLM-Powered Support Assitant
 
-A lightweight, Langfuse-instrumented tool that summarizes and categorizes customer support tickets using OpenAI’s GPT-4o.
+This project uses **GPT-4o** and **Langfuse** to automatically summarize and categorize customer support tickets. It's designed to help support teams onboard agents faster, improve triage, and build datasets for future training and QA workflows.
 
-This project showcases how LLMs can reduce agent workload, accelerate onboarding, and help surface high-volume support themes — all with traceability and observability via Langfuse.
+## 🚀 What It Does
+
+For any given support ticket (e.g., a customer complaint or issue), this script:
+
+1. Generates a **concise summary** using GPT-4o
+2. Automatically assigns a **category** (Billing, Login, Delivery, etc.)
+3. Logs the result to a `.csv` file with a **unique ticket ID**
+4. Optionally tracks each interaction using **Langfuse** for observability
+
+## 💡 Why It Matters
+
+- Build a **training set** for onboarding support agents
+- Enable **tag-based analytics** across ticket types
+- Use clean, structured LLM outputs in real operations
+- Gain **traceability** and debugging visibility with Langfuse
 
 ---
 
-## ✨ Features
+## 🛠️ Tech Stack
 
-- 🔍 **Summarize** customer support tickets into concise summaries
-- 🏷️ **Categorize** tickets into predefined categories:
-  `Billing, Login, Delivery, Refund, Technical, Other`
-- 🎓 Use output as **training material** for onboarding new agents
-- 📈 Full **LLM observability** with [Langfuse](https://langfuse.com) via `@observe()` and `langfuse.openai`
-
----
-
-## 💼 Business Use Cases
-
-- 📉 **Reduce average handle time (AHT)** by giving agents auto-generated summaries
-- 🎓 **Train new agents faster** using categorized summaries as examples
-- 🧠 **Discover support hotspots** by tagging high-volume issues
+- **[OpenAI GPT-4o](https://platform.openai.com/)** — For generating summaries and tags
+- **[Langfuse](https://langfuse.com/)** — To trace prompt/response behavior and monitor outputs
+- **Python** — Scripting and CSV generation
